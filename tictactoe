@@ -1,0 +1,660 @@
+Public Class Form1
+
+    '==============================================================================================
+
+    Private Sub btnSQ1_Click(sender As Object, e As EventArgs) Handles btnSQ1.Click
+        If btnSQ1.Enabled = True Then
+            lblWhoseTurn.Text += 1
+            btnSQ1.Text = "X"
+            btnSQ1.Enabled = False
+            lblWhoseTurn.Enabled = False
+            Call CheckToWin()
+            Call ComTurn()
+        End If
+    End Sub
+
+    Private Sub btnSQ2_Click(sender As Object, e As EventArgs) Handles btnSQ2.Click
+        If btnSQ2.Enabled = True Then
+            lblWhoseTurn.Text += 1
+            btnSQ2.Text = "X"
+            btnSQ2.Enabled = False
+            lblWhoseTurn.Enabled = False
+            Call CheckToWin()
+            Call ComTurn()
+        End If
+    End Sub
+
+    Private Sub btnSQ3_Click(sender As Object, e As EventArgs) Handles btnSQ3.Click
+        If btnSQ3.Enabled = True Then
+            lblWhoseTurn.Text += 1
+            btnSQ3.Text = "X"
+            btnSQ3.Enabled = False
+            lblWhoseTurn.Enabled = False
+            Call CheckToWin()
+            Call ComTurn()
+        End If
+    End Sub
+
+    Private Sub btnSQ4_Click(sender As Object, e As EventArgs) Handles btnSQ4.Click
+        If btnSQ4.Enabled = True Then
+            lblWhoseTurn.Text += 1
+            btnSQ4.Text = "X"
+            btnSQ4.Enabled = False
+            lblWhoseTurn.Enabled = False
+            Call CheckToWin()
+            Call ComTurn()
+        End If
+    End Sub
+
+    Private Sub btnSQ5_Click(sender As Object, e As EventArgs) Handles btnSQ5.Click
+        If btnSQ5.Enabled = True Then
+            lblWhoseTurn.Text += 1
+            btnSQ5.Text = "X"
+            btnSQ5.Enabled = False
+            lblWhoseTurn.Enabled = False
+            Call CheckToWin()
+            Call ComTurn()
+        End If
+    End Sub
+
+    Private Sub btnSQ6_Click(sender As Object, e As EventArgs) Handles btnSQ6.Click
+        If btnSQ6.Enabled = True Then
+            lblWhoseTurn.Text += 1
+            btnSQ6.Text = "X"
+            btnSQ6.Enabled = False
+            lblWhoseTurn.Enabled = False
+            Call CheckToWin()
+            Call ComTurn()
+        End If
+    End Sub
+
+    Private Sub btnSQ7_Click(sender As Object, e As EventArgs) Handles btnSQ7.Click
+        If btnSQ7.Enabled = True Then
+            lblWhoseTurn.Text += 1
+            btnSQ7.Text = "X"
+            btnSQ7.Enabled = False
+            lblWhoseTurn.Enabled = False
+            Call CheckToWin()
+            Call ComTurn()
+        End If
+    End Sub
+
+    Private Sub btnSQ8_Click(sender As Object, e As EventArgs) Handles btnSQ8.Click
+        If btnSQ8.Enabled = True Then
+            lblWhoseTurn.Text += 1
+            btnSQ8.Text = "X"
+            btnSQ8.Enabled = False
+            lblWhoseTurn.Enabled = False
+            Call CheckToWin()
+            Call ComTurn()
+        End If
+    End Sub
+
+    Private Sub btnSQ9_Click(sender As Object, e As EventArgs) Handles btnSQ9.Click
+        If btnSQ9.Enabled = True Then
+            lblWhoseTurn.Text += 1
+            btnSQ9.Text = "X"
+            btnSQ9.Enabled = False
+            lblWhoseTurn.Enabled = False
+            Call CheckToWin()
+            Call ComTurn()
+        End If
+    End Sub
+
+    '==============================================================================================
+
+    Private Sub CheckToWin()
+
+        If lblWhoseTurn.Text < 6 Then
+
+            If btnSQ1.Text = "X" And btnSQ2.Text = "X" And btnSQ3.Text = "X" Or
+            btnSQ1.Text = "X" And btnSQ4.Text = "X" And btnSQ7.Text = "X" Or
+            btnSQ1.Text = "X" And btnSQ5.Text = "X" And btnSQ9.Text = "X" Then
+                MessageBox.Show("Congratulations, you won!")
+                lblWon.Text += 1
+                Call ClearGame()
+            End If
+
+            If btnSQ2.Text = "X" And btnSQ5.Text = "X" And btnSQ8.Text = "X" Then
+                MessageBox.Show("Congratulations, you won!")
+                lblWon.Text += 1
+                Call ClearGame()
+            End If
+
+            If btnSQ3.Text = "X" And btnSQ6.Text = "X" And btnSQ9.Text = "X" Or
+            btnSQ3.Text = "X" And btnSQ5.Text = "X" And btnSQ7.Text = "X" Then
+                MessageBox.Show("Congratulations, you won!")
+                lblWon.Text += 1
+                Call ClearGame()
+            End If
+
+            If btnSQ4.Text = "X" And btnSQ5.Text = "X" And btnSQ6.Text = "X" Then
+                MessageBox.Show("Congratulations, you won!")
+                lblWon.Text += 1
+                Call ClearGame()
+            End If
+
+            If btnSQ7.Text = "X" And btnSQ8.Text = "X" And btnSQ9.Text = "X" Then
+                MessageBox.Show("Congratulations, you won!")
+                lblWon.Text += 1
+                Call ClearGame()
+            End If
+
+        End If
+
+        If lblWhoseTurn.Text < 6 Then
+
+            If btnSQ1.Text = "O" And btnSQ2.Text = "O" And btnSQ3.Text = "O" Or
+            btnSQ1.Text = "O" And btnSQ4.Text = "O" And btnSQ7.Text = "O" Or
+            btnSQ1.Text = "O" And btnSQ5.Text = "O" And btnSQ9.Text = "O" Then
+                MessageBox.Show("You lost!")
+                lblLost.Text += 1
+                Call ClearGame()
+            End If
+
+            If btnSQ2.Text = "O" And btnSQ5.Text = "O" And btnSQ8.Text = "O" Then
+                MessageBox.Show("You lost!")
+                lblLost.Text += 1
+                Call ClearGame()
+            End If
+
+            If btnSQ3.Text = "O" And btnSQ6.Text = "O" And btnSQ9.Text = "O" Or
+            btnSQ3.Text = "O" And btnSQ5.Text = "O" And btnSQ7.Text = "O" Then
+                MessageBox.Show("You lost!")
+                lblLost.Text += 1
+                Call ClearGame()
+            End If
+
+            If btnSQ4.Text = "O" And btnSQ5.Text = "O" And btnSQ6.Text = "O" Then
+                MessageBox.Show("You lost!")
+                lblLost.Text += 1
+                Call ClearGame()
+            End If
+
+            If btnSQ7.Text = "O" And btnSQ8.Text = "O" And btnSQ9.Text = "O" Then
+                MessageBox.Show("You lost!")
+                lblLost.Text += 1
+                Call ClearGame()
+            End If
+
+        End If
+
+        If lblWhoseTurn.Text < 6 Then
+
+            If btnSQ1.Enabled = False And btnSQ2.Enabled = False And btnSQ3.Enabled = False And btnSQ4.Enabled = False And btnSQ5.Enabled = False And btnSQ6.Enabled = False And btnSQ7.Enabled = False And btnSQ8.Enabled = False And btnSQ9.Enabled = False Then
+                MessageBox.Show("You tied!")
+                lblTie.Text += 1
+                Call ClearGame()
+            End If
+
+        End If
+
+    End Sub
+
+    '==============================================================================================
+    Public Class GblVar
+
+        Public Shared FirstMove As Boolean = True
+        Public Shared SecondMove As Boolean = True
+
+    End Class
+
+    Private Sub ComTurn()
+
+        If lblWhoseTurn.Enabled = False And GblVar.FirstMove = True And lblWhoseTurn.Text <= 1 Then
+
+            Select Case GblVar.FirstMove
+                Case GblVar.FirstMove = True And btnSQ1.Text = "X" And btnSQ5.Enabled = True
+                    btnSQ5.Text = "O"
+                    btnSQ5.Enabled = False
+                    GblVar.FirstMove = False
+                    Call CheckToWin()
+
+                Case GblVar.FirstMove = True And btnSQ3.Text = "X" And btnSQ5.Enabled = True
+                    btnSQ5.Text = "O"
+                    btnSQ5.Enabled = False
+                    GblVar.FirstMove = False
+                    Call CheckToWin()
+
+                Case GblVar.FirstMove = True And btnSQ7.Text = "X" And btnSQ5.Enabled = True
+                    btnSQ5.Text = "O"
+                    btnSQ5.Enabled = False
+                    GblVar.FirstMove = False
+                    Call CheckToWin()
+
+                Case GblVar.FirstMove = True And btnSQ9.Text = "X" And btnSQ5.Enabled = True
+                    btnSQ5.Text = "O"
+                    btnSQ5.Enabled = False
+                    GblVar.FirstMove = False
+                    Call CheckToWin()
+
+                Case Else
+
+                    If btnSQ1.Enabled = True Or btnSQ3.Enabled = True Or btnSQ7.Enabled = True Or btnSQ9.Enabled = True Then
+
+                        Dim ComputerChoice As Integer = Int((4 - 1 + 1) * Rnd() + 1)
+                        If ComputerChoice = 1 Then
+                            GblVar.FirstMove = False
+                            Call Primary1()
+                        ElseIf ComputerChoice = 2 Then
+                            GblVar.FirstMove = False
+                            Call Primary2()
+                        ElseIf ComputerChoice = 3 Then
+                            GblVar.FirstMove = False
+                            Call Primary3()
+                        ElseIf ComputerChoice = 4 Then
+                            GblVar.FirstMove = False
+                            Call Primary4()
+                        End If
+
+                    End If
+
+            End Select
+
+        End If
+
+        If lblWhoseTurn.Enabled = False And GblVar.SecondMove = True And lblWhoseTurn.Text >= 2 Then
+
+            Select Case GblVar.SecondMove
+                'Horizontal blocks
+                Case btnSQ1.Text = "X" And btnSQ2.Text = "X" And btnSQ3.Enabled = True
+                    btnSQ3.Text = "O"
+                    btnSQ3.Enabled = False
+                    Call CheckToWin()
+
+                Case btnSQ1.Text = "X" And btnSQ3.Text = "X" And btnSQ2.Enabled = True
+                    btnSQ2.Text = "O"
+                    btnSQ2.Enabled = False
+                    Call CheckToWin()
+
+                Case btnSQ2.Text = "X" And btnSQ3.Text = "X" And btnSQ1.Enabled = True
+                    btnSQ1.Text = "O"
+                    btnSQ1.Enabled = False
+                    Call CheckToWin()
+
+                Case btnSQ4.Text = "X" And btnSQ5.Text = "X" And btnSQ6.Enabled = True
+                    btnSQ6.Text = "O"
+                    btnSQ6.Enabled = False
+                    Call CheckToWin()
+
+                Case btnSQ4.Text = "X" And btnSQ6.Text = "X" And btnSQ5.Enabled = True
+                    btnSQ5.Text = "O"
+                    btnSQ5.Enabled = False
+                    Call CheckToWin()
+
+                Case btnSQ5.Text = "X" And btnSQ6.Text = "X" And btnSQ4.Enabled = True
+                    btnSQ4.Text = "O"
+                    btnSQ4.Enabled = False
+                    Call CheckToWin()
+
+                Case btnSQ7.Text = "X" And btnSQ8.Text = "X" And btnSQ9.Enabled = True
+                    btnSQ9.Text = "O"
+                    btnSQ9.Enabled = False
+                    Call CheckToWin()
+
+                Case btnSQ7.Text = "X" And btnSQ9.Text = "X" And btnSQ8.Enabled = True
+                    btnSQ8.Text = "O"
+                    btnSQ8.Enabled = False
+                    Call CheckToWin()
+
+                Case btnSQ8.Text = "X" And btnSQ9.Text = "X" And btnSQ7.Enabled = True
+                    btnSQ7.Text = "O"
+                    btnSQ7.Enabled = False
+                    Call CheckToWin()
+
+                '======================================================================='
+                'Vertical Blocks
+
+                Case btnSQ1.Text = "X" And btnSQ4.Text = "X" And btnSQ7.Enabled = True
+                    btnSQ7.Text = "O"
+                    btnSQ7.Enabled = False
+                    Call CheckToWin()
+
+                Case btnSQ1.Text = "X" And btnSQ7.Text = "X" And btnSQ4.Enabled = True
+                    btnSQ4.Text = "O"
+                    btnSQ4.Enabled = False
+                    Call CheckToWin()
+
+                Case btnSQ4.Text = "X" And btnSQ7.Text = "X" And btnSQ1.Enabled = True
+                    btnSQ1.Text = "O"
+                    btnSQ1.Enabled = False
+                    Call CheckToWin()
+
+                Case btnSQ2.Text = "X" And btnSQ5.Text = "X" And btnSQ8.Enabled = True
+                    btnSQ8.Text = "O"
+                    btnSQ8.Enabled = False
+                    Call CheckToWin()
+
+                Case btnSQ2.Text = "X" And btnSQ8.Text = "X" And btnSQ5.Enabled = True
+                    btnSQ5.Text = "O"
+                    btnSQ5.Enabled = False
+                    Call CheckToWin()
+
+                Case btnSQ5.Text = "X" And btnSQ8.Text = "X" And btnSQ2.Enabled = True
+                    btnSQ2.Text = "O"
+                    btnSQ2.Enabled = False
+                    Call CheckToWin()
+
+                Case btnSQ3.Text = "X" And btnSQ6.Text = "X" And btnSQ9.Enabled = True
+                    btnSQ9.Text = "O"
+                    btnSQ9.Enabled = False
+                    Call CheckToWin()
+
+                Case btnSQ3.Text = "X" And btnSQ9.Text = "X" And btnSQ6.Enabled = True
+                    btnSQ6.Text = "O"
+                    btnSQ6.Enabled = False
+                    Call CheckToWin()
+
+                Case btnSQ6.Text = "X" And btnSQ9.Text = "X" And btnSQ3.Enabled = True
+                    btnSQ3.Text = "O"
+                    btnSQ3.Enabled = False
+                    Call CheckToWin()
+
+                '======================================================================='
+                'Diagonal blocks
+
+                Case btnSQ1.Text = "X" And btnSQ5.Text = "X" And btnSQ9.Enabled = True
+                    btnSQ9.Text = "O"
+                    btnSQ9.Enabled = False
+                    Call CheckToWin()
+
+                Case btnSQ1.Text = "X" And btnSQ9.Text = "X" And btnSQ5.Enabled = True
+                    btnSQ5.Text = "O"
+                    btnSQ5.Enabled = False
+                    Call CheckToWin()
+
+                Case btnSQ5.Text = "X" And btnSQ9.Text = "X" And btnSQ1.Enabled = True
+                    btnSQ1.Text = "O"
+                    btnSQ1.Enabled = False
+                    Call CheckToWin()
+
+                Case btnSQ3.Text = "X" And btnSQ5.Text = "X" And btnSQ7.Enabled = True
+                    btnSQ7.Text = "O"
+                    btnSQ7.Enabled = False
+                    Call CheckToWin()
+
+                Case btnSQ3.Text = "X" And btnSQ7.Text = "X" And btnSQ5.Enabled = True
+                    btnSQ5.Text = "O"
+                    btnSQ5.Enabled = False
+                    Call CheckToWin()
+
+                Case btnSQ5.Text = "X" And btnSQ7.Text = "X" And btnSQ3.Enabled = True
+                    btnSQ3.Text = "O"
+                    btnSQ3.Enabled = False
+                    Call CheckToWin()
+
+
+                Case Else
+
+                    GblVar.FirstMove = True
+                    Call Fight()
+
+            End Select
+
+        End If
+
+    End Sub
+
+    Private Sub Fight()
+
+        If lblWhoseTurn.Enabled = False And GblVar.SecondMove = True And lblWhoseTurn.Text >= 3 Then
+
+            Select Case GblVar.SecondMove
+                'Horizontal blocks
+                Case btnSQ1.Text = "O" And btnSQ2.Text = "O" And btnSQ3.Enabled = True
+                    btnSQ3.Text = "O"
+                    btnSQ3.Enabled = False
+                    Call CheckToWin()
+
+                Case btnSQ1.Text = "O" And btnSQ3.Text = "O" And btnSQ2.Enabled = True
+                    btnSQ2.Text = "O"
+                    btnSQ2.Enabled = False
+                    Call CheckToWin()
+
+                Case btnSQ2.Text = "O" And btnSQ3.Text = "O" And btnSQ1.Enabled = True
+                    btnSQ1.Text = "O"
+                    btnSQ1.Enabled = False
+                    Call CheckToWin()
+
+                Case btnSQ4.Text = "O" And btnSQ5.Text = "O" And btnSQ6.Enabled = True
+                    btnSQ6.Text = "O"
+                    btnSQ6.Enabled = False
+                    Call CheckToWin()
+
+                Case btnSQ4.Text = "O" And btnSQ6.Text = "O" And btnSQ5.Enabled = True
+                    btnSQ5.Text = "O"
+                    btnSQ5.Enabled = False
+                    Call CheckToWin()
+
+                Case btnSQ5.Text = "O" And btnSQ6.Text = "O" And btnSQ4.Enabled = True
+                    btnSQ4.Text = "O"
+                    btnSQ4.Enabled = False
+                    Call CheckToWin()
+
+                Case btnSQ7.Text = "O" And btnSQ8.Text = "O" And btnSQ9.Enabled = True
+                    btnSQ9.Text = "O"
+                    btnSQ9.Enabled = False
+                    Call CheckToWin()
+
+                Case btnSQ7.Text = "O" And btnSQ9.Text = "O" And btnSQ8.Enabled = True
+                    btnSQ8.Text = "O"
+                    btnSQ8.Enabled = False
+                    Call CheckToWin()
+
+                Case btnSQ8.Text = "O" And btnSQ9.Text = "O" And btnSQ7.Enabled = True
+                    btnSQ7.Text = "O"
+                    btnSQ7.Enabled = False
+                    Call CheckToWin()
+
+                '======================================================================='
+                'Vertical Blocks
+
+                Case btnSQ1.Text = "O" And btnSQ4.Text = "O" And btnSQ7.Enabled = True
+                    btnSQ7.Text = "O"
+                    btnSQ7.Enabled = False
+                    Call CheckToWin()
+
+                Case btnSQ1.Text = "O" And btnSQ7.Text = "O" And btnSQ4.Enabled = True
+                    btnSQ4.Text = "O"
+                    btnSQ4.Enabled = False
+                    Call CheckToWin()
+
+                Case btnSQ4.Text = "O" And btnSQ7.Text = "O" And btnSQ1.Enabled = True
+                    btnSQ1.Text = "O"
+                    btnSQ1.Enabled = False
+                    Call CheckToWin()
+
+                Case btnSQ2.Text = "O" And btnSQ5.Text = "O" And btnSQ8.Enabled = True
+                    btnSQ8.Text = "O"
+                    btnSQ8.Enabled = False
+                    Call CheckToWin()
+
+                Case btnSQ2.Text = "O" And btnSQ8.Text = "O" And btnSQ5.Enabled = True
+                    btnSQ5.Text = "O"
+                    btnSQ5.Enabled = False
+                    Call CheckToWin()
+
+                Case btnSQ5.Text = "O" And btnSQ8.Text = "O" And btnSQ2.Enabled = True
+                    btnSQ2.Text = "O"
+                    btnSQ2.Enabled = False
+                    Call CheckToWin()
+
+                Case btnSQ3.Text = "O" And btnSQ6.Text = "O" And btnSQ9.Enabled = True
+                    btnSQ9.Text = "O"
+                    btnSQ9.Enabled = False
+                    Call CheckToWin()
+
+                Case btnSQ3.Text = "O" And btnSQ9.Text = "O" And btnSQ6.Enabled = True
+                    btnSQ6.Text = "O"
+                    btnSQ6.Enabled = False
+                    Call CheckToWin()
+
+                Case btnSQ6.Text = "O" And btnSQ9.Text = "O" And btnSQ3.Enabled = True
+                    btnSQ3.Text = "O"
+                    btnSQ3.Enabled = False
+                    Call CheckToWin()
+
+                '======================================================================='
+                'Diagonal blocks
+
+                Case btnSQ1.Text = "O" And btnSQ5.Text = "O" And btnSQ9.Enabled = True
+                    btnSQ9.Text = "O"
+                    btnSQ9.Enabled = False
+                    Call CheckToWin()
+
+                Case btnSQ1.Text = "O" And btnSQ9.Text = "O" And btnSQ5.Enabled = True
+                    btnSQ5.Text = "O"
+                    btnSQ5.Enabled = False
+                    Call CheckToWin()
+
+                Case btnSQ5.Text = "O" And btnSQ9.Text = "O" And btnSQ1.Enabled = True
+                    btnSQ1.Text = "O"
+                    btnSQ1.Enabled = False
+                    Call CheckToWin()
+
+                Case btnSQ3.Text = "O" And btnSQ5.Text = "O" And btnSQ7.Enabled = True
+                    btnSQ7.Text = "O"
+                    btnSQ7.Enabled = False
+                    Call CheckToWin()
+
+                Case btnSQ3.Text = "O" And btnSQ7.Text = "O" And btnSQ5.Enabled = True
+                    btnSQ5.Text = "O"
+                    btnSQ5.Enabled = False
+                    Call CheckToWin()
+
+                Case btnSQ5.Text = "O" And btnSQ7.Text = "O" And btnSQ3.Enabled = True
+                    btnSQ3.Text = "O"
+                    btnSQ3.Enabled = False
+                    Call CheckToWin()
+
+
+                Case Else
+
+                    GblVar.FirstMove = True
+                    Call Stuck()
+
+            End Select
+
+        ElseIf lblWhoseTurn.Enabled = False And GblVar.SecondMove = True And lblWhoseTurn.Text <= 2 Then
+
+            GblVar.FirstMove = True
+            Call Stuck()
+
+        End If
+
+    End Sub
+
+    Private Sub Stuck()
+
+        Do While GblVar.FirstMove = True
+            Dim ComputerChoice As Integer = Int((4 - 1 + 1) * Rnd() + 1)
+            If ComputerChoice = 1 Then
+                GblVar.FirstMove = False
+                Call Primary1()
+            ElseIf ComputerChoice = 2 Then
+                GblVar.FirstMove = False
+                Call Primary2()
+            ElseIf ComputerChoice = 3 Then
+                GblVar.FirstMove = False
+                Call Primary3()
+            ElseIf ComputerChoice = 4 Then
+                GblVar.FirstMove = False
+                Call Primary4()
+            End If
+        Loop
+
+        'Put in the secondary stuff here too. Or just make it completely random by adding all
+        'squares into the equation. ^^^^^
+
+    End Sub
+
+    Private Sub Primary1()
+        If lblWhoseTurn.Enabled = False And btnSQ1.Enabled = True Then
+            btnSQ1.Text = "O"
+            btnSQ1.Enabled = False
+            GblVar.FirstMove = False
+            Call CheckToWin()
+            lblWhoseTurn.Enabled = True
+        ElseIf lblWhoseTurn.Enabled = False And btnSQ1.Enabled = False Then
+            Call ComTurn()
+        End If
+    End Sub
+
+    Private Sub Primary2()
+        If lblWhoseTurn.Enabled = False And btnSQ3.Enabled = True Then
+            btnSQ3.Text = "O"
+            btnSQ3.Enabled = False
+            GblVar.FirstMove = False
+            Call CheckToWin()
+            lblWhoseTurn.Enabled = True
+        ElseIf lblWhoseTurn.Enabled = False And btnSQ3.Enabled = False Then
+            Call ComTurn()
+        End If
+    End Sub
+
+    Private Sub Primary3()
+        If lblWhoseTurn.Enabled = False And btnSQ7.Enabled = True Then
+            btnSQ7.Text = "O"
+            btnSQ7.Enabled = False
+            GblVar.FirstMove = False
+            Call CheckToWin()
+            lblWhoseTurn.Enabled = True
+        ElseIf lblWhoseTurn.Enabled = False And btnSQ7.Enabled = False Then
+            Call ComTurn()
+        End If
+    End Sub
+
+    Private Sub Primary4()
+        If lblWhoseTurn.Enabled = False And btnSQ9.Enabled = True Then
+            btnSQ9.Text = "O"
+            btnSQ9.Enabled = False
+            GblVar.FirstMove = False
+            Call CheckToWin()
+            lblWhoseTurn.Enabled = True
+        ElseIf lblWhoseTurn.Enabled = False And btnSQ9.Enabled = False Then
+            Call ComTurn()
+        End If
+    End Sub
+
+    Sub Delay(ByVal dblSecs As Double)
+
+        Const OneSec As Double = 1.0# / (1440.0# * 60.0#)
+        Dim dblWaitTil As Date
+        Now.AddSeconds(OneSec)
+        dblWaitTil = Now.AddSeconds(OneSec).AddSeconds(dblSecs)
+        Do Until Now > dblWaitTil
+            Application.DoEvents() ' Allow windows messages to be processed
+        Loop
+
+    End Sub
+
+    Private Sub ClearGame()
+
+        GblVar.FirstMove = True
+
+        lblWhoseTurn.Enabled = True
+        lblWhoseTurn.Text = 0
+
+        btnSQ1.Text = Nothing
+        btnSQ2.Text = Nothing
+        btnSQ3.Text = Nothing
+        btnSQ4.Text = Nothing
+        btnSQ5.Text = Nothing
+        btnSQ6.Text = Nothing
+        btnSQ7.Text = Nothing
+        btnSQ8.Text = Nothing
+        btnSQ9.Text = Nothing
+
+        btnSQ1.Enabled = True
+        btnSQ2.Enabled = True
+        btnSQ3.Enabled = True
+        btnSQ4.Enabled = True
+        btnSQ5.Enabled = True
+        btnSQ6.Enabled = True
+        btnSQ7.Enabled = True
+        btnSQ8.Enabled = True
+        btnSQ9.Enabled = True
+    End Sub
+
+
+End Class
